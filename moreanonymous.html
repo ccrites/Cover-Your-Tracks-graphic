@@ -132,86 +132,46 @@
     
 /* ************************************************ */
 
+/*.footprints {
+  fill: #ff0077; */
+}
 .footprints[x-img="fox"] > .foot {
     background-image: url(./SVGs/CYT_fox.svg);
+   /* --svg-fill: blue;*/
 }
 .footprints[x-img="fox"] {
-      transform: translate(430px, 60px) rotate(24deg) scale(1.5);
+      transform: translate(50px, 60px) rotate(24deg) scale(2);
       --timing-offset: 1s;
       --animation-duration: 7s;
     }
 /* ************************************************ */
 
-.footprints[x-img="deer"]>.foot {
-      background-image: url(./SVGs/CYT_deer.svg);
-    }
-    .footprints[x-img="deer"] {
-      transform: translate(800px, 100px) rotate(9deg) scale(2.5);
-      /* use --timing-offset to indicate its start time, creating an offset with other footprints */
-      --timing-offset: 8s;
-      /* the length of the full animation loop */
-      --animation-duration: 6s;
-    } 
-/* ************************************************ */
-
-.footprints[x-img="raccoon"] > .foot {
-    background-image: url(./SVGs/CYT_raccoon.svg);
+.footprints[x-img="fox"] > .foot {
+    background-image: url(./SVGs/CYT_fox.svg);
 }
-    .footprints[x-img="raccoon"] {
-      transform: translate(100px, 50px) rotate(-2deg) scale(2);
-      --timing-offset: 9s;
-      --animation-duration: 6s;
+.footprints[x-img="fox"]:nth-child(2) {
+      transform: translate(370px, 50px) rotate(10deg) scale(1.5);
+      --timing-offset: 3s;
+      --animation-duration: 7s;
     }
 /* ************************************************ */
 
-.footprints[x-img="raccoonfoot"] > .foot {
-    background-image: url(./SVGs/CYT_raccoonfoot.svg);
+.footprints[x-img="fox"] > .foot {
+    background-image: url(./SVGs/CYT_fox.svg);
 }
-    .footprints[x-img="raccoonfoot"] {
-     transform: translate(800px, 300px) rotate(30deg) scale(3);
-     --timing-offset: 6s;
-     --animation-duration: 7s;
-    }
-/* ************************************************ */
-
-.footprints[x-img="hoof"] > .foot {
-    background-image: url(./SVGs/CYT_hoof.svg);
-}   
-    .footprints[x-img="hoof"] {
-      transform: translate(400px, 200px) rotate(-30deg) scale(3);
-     --path-height: 700px;
-     --path-width: 300px;
-     --timing-offset: 9s;
-     --animation-duration: 7s;
-   }
-/* ************************************************ */
-
-.footprints[x-img="antelope"] > .foot {
-    background-image: url(./SVGs/CYT_antelope.svg);
-}
-     .footprints[x-img="antelope"] {
-      transform: translate(100px) rotate(-20deg) scale(2.5);
+.footprints[x-img="fox"]:nth-child(3) {
+      transform: translate(640px, 60px) rotate(24deg) scale(3);
       --timing-offset: 5s;
       --animation-duration: 7s;
     }
- /* ************************************************ */
-
-.footprints[x-img="bird"] > .foot {
-    background-image: url(./SVGs/CYT_bird.svg);
-}
-.footprints[x-img="bird"] {
-      transform: translate(280px, 100px) rotate(-5deg);
-      --timing-offset: 4s;
-      --animation-duration: 7s;
-    }
 /* ************************************************ */
 
-.footprints[x-img="dog"] > .foot {
-    background-image: url(./SVGs/CYT_dog.svg);
+.footprints[x-img="fox"] > .foot {
+    background-image: url(./SVGs/CYT_fox.svg);
 }
-.footprints[x-img="dog"] {
-      transform: translate(800px, 150px) rotate(-10deg) scale(1.5);
-      --timing-offset: 8s;
+.footprints[x-img="fox"]:nth-child(4) {
+      transform: translate(50px, 60px) rotate(-30deg) scale(1);
+      --timing-offset: 5s;
       --animation-duration: 7s;
     }
 /* ************************************************ */
@@ -277,7 +237,7 @@
 
 <body>
   <div id="container">
-    <div class="footprints" x-img="deer" first-deer>
+    <div class="footprints" x-img="fox" first-fox>
       <div class="foot"></div>
       <div class="foot"></div>
       <div class="foot"></div>
@@ -287,7 +247,7 @@
       <div class="foot"></div>
       <div class="foot"></div>
     </div>
-  <div class="footprints" x-img="raccoon" first-raccoon>
+  <div class="footprints" x-img="fox" second-fox>
     <div class="foot"></div>
     <div class="foot"></div>
     <div class="foot"></div>
@@ -297,7 +257,7 @@
     <div class="foot"></div>
     <div class="foot"></div>
   </div>
-  <div class="footprints" x-img="raccoonfoot" first-raccoonfoot>
+  <div class="footprints" x-img="fox" third-fox>
     <div class="foot"></div>
     <div class="foot"></div>
     <div class="foot"></div>
@@ -307,7 +267,7 @@
     <div class="foot"></div>
     <div class="foot"></div>
   </div>
-  <div class="footprints" x-img="hoof" first-hoof>
+  <div class="footprints" x-img="fox" fourth-fox>
     <div class="foot"></div>
     <div class="foot"></div>
     <div class="foot"></div>
@@ -317,37 +277,7 @@
     <div class="foot"></div>
     <div class="foot"></div>
   </div>
-  <div class="footprints" x-img="antelope" first-antelope>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-  </div>
-  <div class="footprints" x-img="bird" first-bird>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-  </div>
-  <div class="footprints" x-img="fox" first-fox>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-  </div>
-  <div class="footprints" x-img="dog" first-dog>
+  <div class="footprints" x-img="fox" fifth-fox>
     <div class="foot"></div>
     <div class="foot"></div>
     <div class="foot"></div>
